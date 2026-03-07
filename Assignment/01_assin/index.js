@@ -102,7 +102,7 @@ app.get("/students/average",(req,res) => {
         return res.status(404).json({message:"student avg not found"});
     }
     res.status(200).json({
-        averageCGPA:`${avg}`
+        averageCGPA:`${avg.toFixed(2)}`
     });
 });
 
